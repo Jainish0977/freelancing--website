@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelancing Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #1e1e1e;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #bb86fc;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      background-image: url("download15.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding-top: 80px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #bb86fc;
+    }
+
+    .button-primary {
+      background: #bb86fc;
+      border: none;
+      color: #121212;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .button-primary:hover {
+      background: #9a70cf;
+    }
+
+    .card {
+      background-image:url("images18.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 15px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    }
+    .view-more {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #bb86fc;
+      color: #121212;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .view-more:hover {
+      background-color: #ffffff;
+      color: #bb86fc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 50px 10%;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    footer {
+      background: #1e1e1e;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #bb86fc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .view-more {
+      text-align: center;
+      margin-top: 30px;
+      margin-right: -270px;
+    }
+
+    .view-more a {
+      background-color: #bb86fc;
+      color: #121212;
+      text-decoration: none;
+      font-size: 1.0rem;
+      font-weight: bold;
+    }
+
+    .view-more:hover {
+      background-color: #ffffff;
+      color: #121212;
+      text-decoration: underline;
+    }
+
+    .view {
+      margin: 20px;
+      text-align: center;
+      text-decoration: solid;
+      background-color: #bb86fc;
+      padding: 8px 18px;
+      color: #121212;
+      text-decoration: none;
+      font-size: 1.0rem;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .view:hover {
+      background-color: #ffffff;
+      color: #121212;
+      text-decoration: underline;
+    }
+
+    .about-us {
+      background: #1f1b24;
+      padding: 50px 10%;
+      color: #ffffff;
+    }
+
+    .about-us h2 {
+      color: #bb86fc;
+      margin-bottom: 20px;
+    }
+
+    .about-us p {
+      line-height: 1.6;
+    }
+
+    .amazing-features {
+      background: #1f1b24;
+      padding: 50px 10%;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .amazing-features h2 {
+      color: #bb86fc;
+      margin-bottom: 20px;
+    }
+
+    .amazing-features p {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    .amazing-features .feature-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .amazing-features .feature-item {
+      background: #2c2c2c;
+      padding: 20px;
+      border-radius: 12px;
+      width: 250px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Freelancer Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">ContactUs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <img src="images11-removebg-preview.png" alt="Freelancer Hub Logo">
+      <h1>Welcome to Freelancer Hub</h1>
+      <p>Your go-to place for hiring the best freelancers.</p>
+      <button class="button-primary">Explore</button>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Accounting & Finance">
+      <h2>Personal Services</h2>
+      <p>Find reliable experts for your personal needs</p>
+      <a href="p&s.html" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Data Analysis">
+      <h2>Lifestyle & Personal Services</h2>
+      <p>Enhance your lifestyle with top-notch personal services</p>
+      <a href="l&p.html" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Translation Services">
+      <h2>Construction & Maintenance</h2>
+      <p>Find skilled workers for your construction and maintenance projects</p>
+      <a href="c&m.html" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Web Development">
+      <h2>IT & Technology</h2>
+      <p>Find the best IT and technology experts for your business needs</p>
+      <a href="i&t.html" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Graphic Design">
+      <h2>Creative & Design</h2>
+      <p>Discover top creative and design professionals for your projects</p>
+      <a href="c&d.html" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Digital Marketing">
+      <h2>Writing & Content Creation</h2>
+      <p>Find talented writers and content creators for your projects</p>
+      <a href="w&c.html" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Content Writing">
+      <h2>Marketing & Advertising</h2>
+      <p>Connect with experts to grow your brand and business</p>
+      <a href="m&a.html" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Video Editing">
+      <h2>Video & Audio Production</h2>
+      <p>Find the best talent for your video and audio production needs</p>
+      <a href="v&a.html" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="SEO Specialist">
+      <h2>Business Services</h2>
+      <p>Find expert business solutions for your company needs</p>
+      <a href="b&s.html" class="view-more">View More</a>
+    </div>
+  </section>
+
+  <section class="amazing-features">
+    <h2>Amazing Features</h2>
+    <p>Discover why Freelancer Hub is the perfect platform for your needs:</p>
+    <div class="feature-list">
+      <div class="feature-item">
+        <h3>Wide Talent Pool</h3>
+        <p>Access freelancers from a variety of fields and specializations.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Secure Payments</h3>
+        <p>Ensure safe transactions with our secure payment gateway.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Work Management</h3>
+        <p>Manage your Works seamlessly with our intuitive tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <section class="about-us">
+      <h2>About Us</h2>
+      <p>Freelancer Hub connects businesses with top-notch freelancers across various fields, from web development to creative design. Our mission is to empower professionals and businesses alike by creating a reliable and efficient platform for collaboration.</p>
+    </section>
+    
+    <p>&copy; 2025 Freelancer Hub. All rights reserved.</p>
+    <p>Follow us on <a href="#">Twitter</a>, <a href="#">LinkedIn</a>, and <a href="#">Facebook</a>.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Dark theme freelancing website ready with amazing features and categories!');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative & Design - Freelancer Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #1e1e1e;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #bb86fc;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #bb86fc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 50px 10%;
+    }
+
+    .card {
+      background-image:url("images18.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 12px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      margin-top: 15px;
+      font-size: 1.5rem;
+      color: #bb86fc;
+    }
+
+    .card p {
+      margin-top: 10px;
+      color: #dddddd;
+    }
+
+    .view-more {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #bb86fc;
+      color: #121212;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .view-more:hover {
+      background-color: #ffffff;
+      color: #bb86fc;
+    }
+
+    footer {
+      background: #1e1e1e;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #bb86fc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .about-us {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      padding: 40px;
+      background: #2c2c2c;
+      border-radius: 12px;
+    }
+
+    .about-us h2 {
+      color: #bb86fc;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .about-us p {
+      color: #dddddd;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Freelancer Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Creative & Design</h1>
+    <p>Discover top creative and design professionals for your projects</p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Graphic Designers">
+      <h2>Graphic Designers</h2>
+      <p>Bring your ideas to life with professional graphic designers.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Illustrators">
+      <h2>Illustrators</h2>
+      <p>Creative illustrations for books, marketing, and more.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="UI/UX Designers">
+      <h2>UI/UX Designers</h2>
+      <p>Design user-friendly and visually appealing interfaces.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Branding Specialists">
+      <h2>Branding Specialists</h2>
+      <p>Build a strong and recognizable brand identity.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="3D Designers">
+      <h2>3D Designers</h2>
+      <p>Create stunning 3D models and animations.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Video Editors">
+      <h2>Video Editors</h2>
+      <p>Craft compelling videos with expert editors.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Motion Graphics Artists">
+      <h2>Motion Graphics Artists</h2>
+      <p>Dynamic and engaging motion graphics for media.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Animators">
+      <h2>Animators</h2>
+      <p>2D and 3D animation for entertainment and advertising.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Photographers">
+      <h2>Photographers</h2>
+      <p>Capture perfect moments with professional photographers.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Interior Designers">
+      <h2>Interior Designers</h2>
+      <p>Create beautiful and functional living spaces.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+  </section>
+
+  <footer>
+    <section class="about-us">
+      <h2>About Us</h2>
+      <p>Freelancer Hub connects businesses with top-notch creative professionals. Whether you need graphic design, animation, or interior design, our experts bring your vision to life. Join us to find the perfect talent for your project.</p>
+    </section>
+    <p>&nbsp;</p>
+    <p>&copy; 2025 Freelancer Hub. All rights reserved.</p>
+    <p>Follow us on <a href="#">Twitter</a>, <a href="#">LinkedIn</a>, and <a href="#">Facebook</a>.</p>
+</footer>
+
+</body>
+</html>

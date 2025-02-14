@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP Verification - Freelancer Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #1f1b24;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #bb86fc;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #2c2c2c;
+      color: #ffffff;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    button {
+      background: #bb86fc;
+      color: #121212;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #9a70cf;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>OTP Verification</h1>
+    <form action="#" method="POST">
+      <label for="otp">Enter OTP:</label>
+      <input type="text" id="otp" name="otp" placeholder="Enter 6-digit OTP" maxlength="6" required>
+      <button type="button" onclick="verifyOTP()">Verify OTP</button>
+    </form>
+  </div>
+  <script>
+    function verifyOTP() {
+      const otpInput = document.getElementById('otp').value;
+      if (otpInput.length !== 6 || isNaN(otpInput)) {
+        alert('Please enter a valid 6-digit OTP.');
+        return;
+      }
+      alert('OTP verified successfully!');
+      window.location.href = 'newpass.html'; // Redirect to the home page
+    }
+  </script>
+</body>
+</html>

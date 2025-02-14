@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art & Craft - Freelancer Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #1e1e1e;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #bb86fc;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #bb86fc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 50px 10%;
+    }
+
+    .card {
+      background-image:url("images18.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 12px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      margin-top: 15px;
+      font-size: 1.5rem;
+      color: #bb86fc;
+    }
+
+    .card p {
+      margin-top: 10px;
+      color: #dddddd;
+    }
+
+    .view-more {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #bb86fc;
+      color: #121212;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .view-more:hover {
+      background-color: #ffffff;
+      color: #bb86fc;
+    }
+
+    footer {
+      background: #1e1e1e;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #bb86fc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .about-us {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      padding: 40px;
+      background: #2c2c2c;
+      border-radius: 12px;
+    }
+
+    .about-us h2 {
+      color: #bb86fc;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .about-us p {
+      color: #dddddd;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Freelancer Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">ContactUs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Art & Craft</h1>
+    <p>Explore a world of creativity with expert artisans</p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Painting Services">
+      <h2>Painting Services</h2>
+      <p>Beautiful and bespoke paintings crafted by professionals.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Pottery & Ceramics">
+      <h2>Pottery & Ceramics</h2>
+      <p>Handcrafted pottery and ceramic art pieces.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Handmade Jewelry">
+      <h2>Handmade Jewelry</h2>
+      <p>Unique and elegant jewelry designs.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Sculpture & Carving">
+      <h2>Sculpture & Carving</h2>
+      <p>Exquisite sculptures and carvings for your space.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Textile Craft">
+      <h2>Textile Craft</h2>
+      <p>Beautiful fabric-based craft creations.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Wood Craft">
+      <h2>Wood Craft</h2>
+      <p>Artisan woodwork crafted to perfection.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Paper Craft">
+      <h2>Paper Craft</h2>
+      <p>Creative and intricate paper craft designs.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Calligraphy">
+      <h2>Calligraphy</h2>
+      <p>Elegant and artistic calligraphy services.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Glass Art">
+      <h2>Glass Art</h2>
+      <p>Stunning glass art creations for your space.</p>
+      <a href="#" class="view-more">View More</a>
+    </div>
+  </section>
+
+  <footer>
+    <section class="about-us">
+      <h2>About Us</h2>
+      <p>Freelancer Hub connects businesses and individuals with creative artisans in the world of art and craft. Whether you need a bespoke painting, handmade jewelry, or stunning pottery, our experts deliver exceptional artistry. Join us to discover unique talents and creative solutions.</p>
+    </section>
+    <p>&nbsp;</p>
+    <p>&copy; 2025 Freelancer Hub. All rights reserved.</p>
+    <p>Follow us on <a href="#">Twitter</a>, <a href="#">LinkedIn</a>, and <a href="#">Facebook</a>.</p>
+  </footer>
+
+</body>
+</html>

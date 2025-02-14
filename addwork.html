@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Your Work - Freelancer Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #1e1e1e;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #bb86fc;
+    }
+
+    main {
+      padding: 120px 20px 50px;
+      max-width: 600px;
+      margin: 0 auto;
+      background: #1f1b24;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      color: #bb86fc;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      font-weight: 700;
+    }
+
+    input, textarea, select {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 20px;
+      background: #2c2c2c;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      background: #bb86fc;
+      color: #121212;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: #9a6deb;
+    }
+
+    footer {
+      background: #1e1e1e;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #bb86fc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Freelancer Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">ContactUs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Add Your Work</h1>
+    <p>Please fill out the form below to showcase your work on Freelancer Hub.</p>
+    <form action="#" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      
+      <label for="mobilenumber">Mobile Number:</label>
+      <input type="mobilenumber" id="mobilenumber" name="MobileNumber" placeholder="Enter your Mobile Number" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="">Select a Category</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Graphic Design">Graphic Design</option>
+        <option value="Digital Marketing">Digital Marketing</option>
+        <option value="Content Writing">Content Writing</option>
+        <option value="Video Editing">Video Editing</option>
+        <option value="SEO Specialist">SEO Specialist</option>
+        <option value="Mobile App Development">Mobile App Development</option>
+        <option value="Virtual Assistant">Virtual Assistant</option>
+        <option value="UI/UX Design">UI/UX Design</option>
+        <option value="Photography">Photography</option>
+        <option value="Copywriting">Copywriting</option>
+        <option value="Translation">Translation</option>
+        <option value="Data Analysis">Data Analysis</option>
+        <option value="Customer Support">Customer Support</option>
+        <option value="Blockchain Development">Blockchain Development</option>
+        <option value="Game Development">Game Development</option>
+        <option value="Cybersecurity">Cybersecurity</option>
+        <option value="3D Modeling & Animation">3D Modeling & Animation</option>
+        <option value="E-commerce Solutions">E-commerce Solutions</option>
+        <option value="Technical Writing">Technical Writing</option>
+        <option value="Legal Consulting">Legal Consulting</option>
+        <option value="Finance & Accounting">Finance & Accounting</option>
+        <option value="Voice Over Services">Voice Over Services</option>
+        <option value="Project Management">Project Management</option>
+        <option value="AI & Machine Learning">AI & Machine Learning</option>
+        <option value="Architectural Design">Architectural Design</option>
+        <option value="Event Planning">Event Planning</option>
+        <option value="Interior Design">Interior Design</option>
+        <option value="Music Production">Music Production</option>
+        <option value="Health & Fitness Coaching">Health & Fitness Coaching</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="description">Work Description:</label>
+      <textarea id="description" name="description" rows="4" placeholder="Describe your work..." required></textarea>
+
+      <label for="portfolio">Portfolio Link (optional):</label>
+      <input type="url" id="portfolio" name="portfolio" placeholder="https://yourportfolio.com">
+
+      <input type="submit" value="Submit Work">
+    </form>
+  </main>
+
+  <footer>
+    <section class="about-us">
+      <h2>About Us</h2>
+      <p>Freelancer Hub connects businesses with top-notch freelancers across various fields, from web development to creative design. Our mission is to empower professionals and businesses alike by creating a reliable and efficient platform for collaboration.</p>
+    </section>
+    <p>&nbsp;</p>
+    <p>&copy; 2025 Freelancer Hub. All rights reserved.</p>
+    <p>Follow us on <a href="#">Twitter</a>, <a href="#">LinkedIn</a>, and <a href="#">Facebook</a>.</p>
+  </footer>
+
+</body>
+</html>
