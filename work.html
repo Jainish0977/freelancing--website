@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freelance Details Form</title>
-    <style>
-        body {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Freelancer Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Roboto', sans-serif;
       background-color: #121212;
       color: #ffffff;
@@ -14,76 +21,112 @@
       align-items: center;
       min-height: 100vh;
     }
-        .form-box {
-            background: #1f1b24;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-        }
-        .form-box h2 {
-            margin-bottom: 20px;
-            color: #bb86fc;
-        }
-        .form-box label {
-            display: block;
-            margin-bottom: 8px;
-            text-align: left;
-            color: #ffffff;
-        }
-        .form-box input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 8px;
-            background: #2c2c2c;
-            color: #ffffff;
-        }
-        .form-box input[type="submit"] {
-            background: #bb86fc;
-            color: rgb(18, 13, 13);
-            padding: 10px 15px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
-        }
-        .form-box input[type="submit"]:hover {
-            background: #bb86fc;
-            color: #121212;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
+
+    .container {
+      background: #1f1b24;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+      max-width: 400px;
+      width: 100%;
     }
-        
-    </style>
+
+    h1 {
+      text-align: center;
+      color: #bb86fc;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #2c2c2c;
+      color: #ffffff;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: gray;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: not-allowed;
+      margin-top: 10px;
+    }
+
+    button.enabled {
+      background-color: #bb86fc;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #9a70cf;
+    }
+
+  </style>
 </head>
 <body>
-    <div class="form-box">
-        <h2>Freelance Details Form</h2>
-        <form>
-            <label for="companyInfo">1. Company Information:</label>
-            <input type="text" id="companyInfo" name="companyInfo" placeholder="Enter company information">
+  <div class="container">
+    <h1>Register</h1>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Full Name" required>
 
-            <label for="projectDetails">2. Project Details:</label>
-            <input type="text" id="projectDetails" name="projectDetails" placeholder="Enter project details">
+      <label for="email">Mobile No:</label>
+      <input type="MobileNumber" id="MobileNumber" name="MobileNumber" placeholder="Your Mobile Number" required>
 
-            <label for="freelancerInfo">3. Freelancer's Information:</label>
-            <input type="text" id="freelancerInfo" name="freelancerInfo" placeholder="Enter freelancer's information">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-            <label for="legalDetails">4. Legal and Contractual Details:</label>
-            <input type="text" id="legalDetails" name="legalDetails" placeholder="Enter legal and contractual details">
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Create a Password" required>
 
-            <label for="logisticalDetails">5. Logistical Details:</label>
-            <input type="text" id="logisticalDetails" name="logisticalDetails" placeholder="Enter logistical details">
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
 
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+      <label for="experience">Experience (Years):</label>
+      <input type="number" id="experience" name="experience" min="0" placeholder="Years of Experience">
+
+      <button type="submit" id="registerBtn" disabled>Register</button>
+
+    </form>
+  </div>
+
+  <script>
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+    const registerBtn = document.getElementById("registerBtn");
+
+    function validatePassword() {
+        if (password.value === confirmPassword.value && password.value.length > 0) {
+            registerBtn.disabled = false;
+            registerBtn.classList.add("enabled");
+        } else {
+            registerBtn.disabled = true;
+            registerBtn.classList.remove("enabled");
+        }
+    }
+
+    confirmPassword.addEventListener("keyup", validatePassword);
+    password.addEventListener("keyup", validatePassword);
+
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+        if (password.value !== confirmPassword.value) {
+            event.preventDefault();
+            alert("Sorry, password is not matched !!");
+        }
+    });
+</script>
+
 </body>
 </html>
